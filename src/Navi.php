@@ -103,7 +103,7 @@ class Navi
     protected function filterClasses($classes)
     {
         return collect($classes)->filter(function ($class) {
-            return ! Str::contains($class, $this->classes);
+            return ! in_array($class, $this->classes);
         })->implode(' ');
     }
 
